@@ -2,7 +2,7 @@
 AI-powered lead generation system for 3D In-Vitro Models in pharma/biotech
 Built for: Task at Euprime AI Engineering Intern | Built by: Sumit Gatade
 
-🎯 What It Does
+# 1. 🎯 What It Does
 This tool identifies and ranks biotech/pharma researchers who are most likely to be interested in 3D in-vitro models for therapy development.
 Input: PubMed publications on relevant topics
 Output: Ranked list of leads with propensity scores (0-100)
