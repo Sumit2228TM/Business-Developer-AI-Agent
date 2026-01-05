@@ -1,6 +1,9 @@
 🧬 Biotech Lead Scoring Agent
 AI-powered lead generation system for 3D In-Vitro Models in pharma/biotech
-Built for: Task at Euprime AI Engineering Intern | Built by: Sumit Gatade
+Built by: Sumit Gatade
+
+🚀 AI Agent Live Demo : 
+https://business-developer-ai-agent-9u5vgbtfbhuebaf7zrnv2y.streamlit.app/
 
 # 1. 🎯 What It Does
 This tool identifies and ranks biotech/pharma researchers who are most likely to be interested in 3D in-vitro models for therapy development.
