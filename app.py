@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 # 1. THIS MUST BE THE FIRST LINE AND ONLY APPEAR ONCE
-st.set_page_config(page_title="Euprime Lead Dashboard", layout="wide")
+st.set_page_config(page_title="Biotech Business AI Agent", layout="wide")
 
 # --- 2. DATA LOADING ---
 @st.cache_data
@@ -88,4 +88,5 @@ else:
     st.warning("📡 No data found. Please ensure 'leads_scored.csv' is in your folder.")
     if st.button("Retry Load"):
         st.rerun()
+
 
