@@ -1,3 +1,4 @@
-biopython
+streamlit==1.31.1
+altair<5
 pandas
-streamlit
+biopython
