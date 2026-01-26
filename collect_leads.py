@@ -14,7 +14,7 @@ def collect_biotech_leads():
     """
     print(" Starting lead collection...")
     
-    # Keywords from the assignment
+    
     keywords = [
         "DILI", "drug-induced liver injury", "hepatotoxicity",
         "3D cell culture", "organoid", "spheroid", "in vitro toxicity"
@@ -189,3 +189,4 @@ if __name__ == "__main__":
     leads = collect_biotech_leads()
 
     print(f"\n Collection complete! Run 'python score_leads.py' next")
+
