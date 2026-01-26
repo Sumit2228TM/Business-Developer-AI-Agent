@@ -1,4 +1,3 @@
-# score_leads.py - FINAL VERSION FOR EUPRIME ASSIGNMENT
 import pandas as pd
 from datetime import datetime
 
@@ -7,16 +6,16 @@ def score_all_leads():
     Score leads from leads_raw.csv
     Output: leads_scored.csv (Dashboard Ready)
     """
-    print("🎯 Starting Stage 3: Ranking...")
+    print(" Starting Stage 3: Ranking...")
     
     # Load raw leads
     try:
         df = pd.read_csv("leads_raw.csv")
     except FileNotFoundError:
-        print("❌ Error: leads_raw.csv not found. Run collect_leads.py first.")
+        print(" Error: leads_raw.csv not found. Run collect_leads.py first.")
         return
         
-    print(f"📊 Processing {len(df)} potential leads")
+    print(f" Processing {len(df)} potential leads")
     
     # Score each lead
     scores = []
@@ -49,13 +48,13 @@ def score_all_leads():
 
     df['HQ'] = df.apply(extract_hq, axis=1)
     
-    # --- NEW: ACTION COLUMN (Requirement 3.1 in PDF) ---
+    # --- NEW: ACTION COLUMN ---
     df['Action'] = 'Ready to Outreach'
 
     # Sort by Probability
     df = df.sort_values('Probability', ascending=False)
     
-    # --- FINAL FORMATTING: Re-ordering columns to match the PDF exactly ---
+    # --- FINAL FORMATTING: ---
     # PDF Required Order: Rank, Probability, Name, Title, Company, Location, HQ, Email, LinkedIn, Action
     df['Rank'] = range(1, len(df) + 1)
     
@@ -79,11 +78,11 @@ def score_all_leads():
     
     # Save scored leads
     final_df.to_csv("leads_scored.csv", index=False)
-    print(f"✅ Ranking Complete! {len(df)} leads organized.")
-    print(f"💾 Saved to leads_scored.csv with required 'Location Split' and 'Action' columns.")
+    print(f" Ranking Complete! {len(df)} leads organized.")
+    print(f" Saved to leads_scored.csv with required 'Location Split' and 'Action' columns.")
     
     # Show summary
-    print(f"\n📈 PROBABILITY SUMMARY:")
+    print(f"\n PROBABILITY SUMMARY:")
     print(f"   Tier A (80-100%): {len(df[df['tier']=='A'])} leads")
     print(f"   Tier B (60-79%):  {len(df[df['tier']=='B'])} leads")
     print(f"   Tier C (0-59%):   {len(df[df['tier']=='C'])} leads")
@@ -163,4 +162,5 @@ def score_scientific(pub_date, keywords):
     return min(40, score)
 
 if __name__ == "__main__":
+
     score_all_leads()
