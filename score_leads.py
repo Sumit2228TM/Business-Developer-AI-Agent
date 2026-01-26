@@ -32,7 +32,7 @@ def score_all_leads():
     df['Probability'] = [s['total'] for s in scores]
     df['tier'] = [s['tier'] for s in scores]
     
-    # --- NEW: LOCATION SPLIT LOGIC (Requirement 3.2 in PDF) ---
+    # --- NEW: LOCATION SPLIT LOGIC  ---
     # Distinguishes between Person's Location and Company HQ
     def extract_hq(row):
         hubs = ['Boston', 'Cambridge', 'San Francisco', 'Basel', 'San Diego', 'Oxford', 'London']
@@ -164,3 +164,4 @@ def score_scientific(pub_date, keywords):
 if __name__ == "__main__":
 
     score_all_leads()
+
