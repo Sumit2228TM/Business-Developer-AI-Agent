@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 
-# 1. THIS MUST BE THE FIRST LINE AND ONLY APPEAR ONCE
+# 1. Title
 st.set_page_config(page_title="Biotech Business AI Agent", layout="wide")
 
 # --- 2. DATA LOADING ---
@@ -21,7 +21,7 @@ def load_scored_data():
         return None
 
 # --- 3. DASHBOARD UI ---
-st.title("🧬 Business Developer AI Agent")
+st.title(" Business Developer AI Agent")
 st.markdown("### 3D In-Vitro Model: Qualified Lead Generation")
 
 df = load_scored_data()
@@ -78,15 +78,16 @@ if df is not None and not df.empty:
     
     # Download Button
     st.download_button(
-        "📥 Download Current View (CSV)",
+        " Download Current View (CSV)",
         data=filtered_df.to_csv(index=False),
         file_name="qualified_leads_filtered.csv",
         mime="text/csv"
     )
 
 else:
-    st.warning("📡 No data found. Please ensure 'leads_scored.csv' is in your folder.")
+    st.warning(" No data found. Please ensure 'leads_scored.csv' is in your folder.")
     if st.button("Retry Load"):
         st.rerun()
+
 
 
