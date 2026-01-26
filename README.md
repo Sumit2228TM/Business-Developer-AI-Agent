@@ -39,8 +39,11 @@ FactorWeightExampleRole Fit30 ptsTitle contains "Director of Toxicology"Company 
 Tiers:
 
 Tier A (80-100): Hot leads - contact immediately
+
 Tier B (60-79): Warm leads - qualify further
+
 Tier C (0-59): Cold leads - long-term nurture
+
 
 
 ## Project Structure
@@ -55,46 +58,71 @@ biotech-lead-scorer/
 ### Data Sources
 
 PubMed (active): Recent publications on DILI, hepatotoxicity, 3D models
+
 LinkedIn (future): Sales Navigator exports
+
 NIH RePORTER (future): Grant recipients
+
 Conferences (future): SOT, AACR attendees
+
 
 
 ## Sample Output
 The dashboard shows:
 
 50+ leads collected from PubMed
+
 Ranked by propensity score
+
 Filterable by tier, location, company
+
 Exportable to CSV
 
+
 Top Lead Example:
+
 Dr. Sarah Johnson (Score: 95/100)
+
 Director of Toxicology at Pfizer
+
 Cambridge, MA
+
 sarah.johnson@pfizer.com
+
 "Assessment of DILI risk using 3D hepatic spheroids" (2024)
 
 ## Technical Skills Demonstrated
 
 API Integration: Biopython/PubMed NCBI API
+
 Data Processing: Pandas for ETL pipeline
+
 Feature Engineering: Weighted scoring algorithm
+
 Web Development: Streamlit dashboard
+
 NLP: Text parsing for company/location extraction
+
 
 
 ## Future Enhancements
 
  Add LinkedIn Sales Navigator integration
+ 
  Email enrichment via Hunter.io
+ 
  Conference attendee scraping
+ 
  Funding data from Crunchbase
+ 
  ML-based scoring (XGBoost)
+ 
 
 
 ## Contact
 Sumit Gatade
 sumitgatade05@gmail.com
+
 LinkedIn - https://www.linkedin.com/in/sumit-gatade-b30142295/
+
 GitHub - https://github.com/Sumit2228TM
