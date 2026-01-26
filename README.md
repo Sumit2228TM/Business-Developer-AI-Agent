@@ -47,6 +47,7 @@ Tier C (0-59): Cold leads - long-term nurture
 
 
 ## Project Structure
+```
 biotech-lead-scorer/
 ├── collect_leads.py      # PubMed scraper
 ├── score_leads.py        # Scoring engine
@@ -54,6 +55,7 @@ biotech-lead-scorer/
 ├── leads_raw.csv         # Raw collected leads
 ├── leads_scored.csv      # Scored & ranked leads
 └── README.md
+```
 
 ### Data Sources
 
