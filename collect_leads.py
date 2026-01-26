@@ -1,4 +1,3 @@
-# collect_leads.py - MINIMAL VERSION FOR 10-HOUR DEMO
 # Run this first: pip install biopython pandas
 
 from Bio import Entrez
@@ -13,7 +12,7 @@ def collect_biotech_leads():
     Collect leads from PubMed in ONE function
     Target: 50-100 leads in under 2 hours
     """
-    print("🧬 Starting lead collection...")
+    print(" Starting lead collection...")
     
     # Keywords from the assignment
     keywords = [
@@ -24,7 +23,7 @@ def collect_biotech_leads():
     all_leads = []
     
     for keyword in keywords:
-        print(f"\n📡 Searching: {keyword}")
+        print(f"\n Searching: {keyword}")
         
         # Search PubMed
         query = f'"{keyword}"[Title/Abstract] AND (2023[PDAT] : 3000[PDAT])'
@@ -99,7 +98,7 @@ def collect_biotech_leads():
                     continue
         
         except Exception as e:
-            print(f"   ⚠️  Error: {e}")
+            print(f"     Error: {e}")
             continue
     
     # Remove duplicates by name
@@ -110,12 +109,12 @@ def collect_biotech_leads():
             seen.add(lead["name"])
             unique_leads.append(lead)
     
-    print(f"\n✅ Collected {len(unique_leads)} unique leads")
+    print(f"\n Collected {len(unique_leads)} unique leads")
     
     # Save to CSV
     df = pd.DataFrame(unique_leads)
     df.to_csv("leads_raw.csv", index=False)
-    print(f"💾 Saved to leads_raw.csv")
+    print(f" Saved to leads_raw.csv")
     
     return unique_leads
 
@@ -188,4 +187,5 @@ def guess_email(name, company):
 
 if __name__ == "__main__":
     leads = collect_biotech_leads()
-    print(f"\n🎉 Collection complete! Run 'python score_leads.py' next")
+
+    print(f"\n Collection complete! Run 'python score_leads.py' next")
